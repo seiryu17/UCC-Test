@@ -6,12 +6,19 @@ use App\Models\Vehicle;
 
 class VehicleController extends Controller
 {
+    public function index(){
+
+        $vehicle = Vehicle::all();
+
+        return response()->json($vehicle);
+    }
+
     public function create(Request $request){
 
         $this->validate($request,[
             'name' => 'required|string',
-            'engine_displacement' => 'required|integer',
-            'engine_power' => 'required|integer',
+            'engine_displacement' => 'required',
+            'engine_power' => 'required',
             'price' => 'required|integer',
             'location' => 'required|string',
         ]);

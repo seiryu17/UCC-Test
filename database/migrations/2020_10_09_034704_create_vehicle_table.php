@@ -16,8 +16,8 @@ class CreateVehicleTable extends Migration
         Schema::create('vehicle', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('engine_displacement');
-            $table->integer('engine_power');
+            $table->double('engine_displacement');
+            $table->double('engine_power');
             $table->integer('price');
             $table->string('location');
             $table->timestamps();

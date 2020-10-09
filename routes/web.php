@@ -14,4 +14,5 @@
 */
 
 $router->post('/vehicle','VehicleController@create');
+$router->get('/vehicle','VehicleController@index');
 
