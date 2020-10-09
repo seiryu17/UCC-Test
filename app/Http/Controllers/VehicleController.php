@@ -20,7 +20,7 @@ class VehicleController extends Controller
             'engine_displacement' => 'required',
             'engine_power' => 'required',
             'price' => 'required|integer',
-            'location' => 'required|string',
+            'location' => 'required|string'
         ]);
 
         $data = $request->all();
