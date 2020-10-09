@@ -13,7 +13,5 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return 'halo dunia';
-});
+$router->post('/vehicle','VehicleController@create');
 
