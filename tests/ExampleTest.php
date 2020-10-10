@@ -10,12 +10,20 @@ class ExampleTest extends TestCase
      *
      * @return void
      */
-    public function testExample()
+    public function testGet()
     {
-        $this->get('/');
+        $response = $this->get('/vehicle');
 
-        $this->assertEquals(
-            $this->app->version(), $this->response->getContent()
-        );
+        $response->assertResponseStatus(201);
+
+    }
+    public function testPost()
+    {
+        $response = $this->json('POST', '/vehicle', ['name' => 'Avanza','engine_displacement'=>'1.5','engine_power'=>'104','price'=>'23000','location'=>'Batam']);
+
+        $response
+            ->assertResponseStatus(201);
+
     }
 }
+ 

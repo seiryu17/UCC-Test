@@ -10,7 +10,7 @@ class VehicleController extends Controller
 
         $vehicle = Vehicle::all();
 
-        return response()->json($vehicle);
+        return response()->json(['Success'], 201);
     }
 
     public function create(Request $request){
@@ -26,6 +26,6 @@ class VehicleController extends Controller
         $data = $request->all();
         $vehicle = Vehicle::create($data);
 
-        return response()->json($vehicle);
+        return response()->json(['Success'], 201); 
     }
 }
